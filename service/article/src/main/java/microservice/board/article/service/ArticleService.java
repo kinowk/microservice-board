@@ -3,6 +3,7 @@ package microservice.board.article.service;
 import lombok.RequiredArgsConstructor;
 import microservice.board.article.controller.request.ArticleCreateRequest;
 import microservice.board.article.controller.request.ArticleUpdateRequest;
+import microservice.board.article.controller.response.ArticlePageResponse;
 import microservice.board.article.controller.response.ArticleResponse;
 import microservice.board.article.entity.Article;
 import microservice.board.article.repository.ArticleRepository;
@@ -42,5 +43,18 @@ public class ArticleService {
     public void delete(Long id) {
         Article article = articleRepository.findById(id).orElseThrow();
         articleRepository.delete(article);
+    }
+
+    public ArticlePageResponse readAll(Long boardId, Long page, Long pageSize) {
+        return ArticlePageResponse.of(
+                articleRepository.findAll(boardId, (page - 1) * pageSize, pageSize)
+                        .stream()
+                        .map(ArticleResponse::from)
+                        .toList(),
+                articleRepository.count(
+                        boardId,
+                        PageLimitCalculator.calculatePageLimit(page, pageSize, 10L)
+                )
+        );
     }
 }
