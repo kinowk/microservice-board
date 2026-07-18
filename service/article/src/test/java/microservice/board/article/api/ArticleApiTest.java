@@ -2,6 +2,7 @@ package microservice.board.article.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import microservice.board.article.controller.response.ArticlePageResponse;
 import microservice.board.article.controller.response.ArticleResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.web.client.RestClient;
@@ -76,6 +77,20 @@ public class ArticleApiTest {
         restClient.delete()
                 .uri("/v1/articles/{articleId}", id)
                 .retrieve();
+    }
+
+    @Test
+    void realAll() {
+        ArticlePageResponse response = restClient.get()
+                .uri("/v1/articles?boardId=1&pageSize=30&page=50000")
+                .retrieve()
+                .body(ArticlePageResponse.class);
+
+        System.out.println("response.getArticles() = " + response.getArticles());
+        System.out.println("response.getCount() = " + response.getCount());
+        for (ArticleResponse article : response.getArticles()) {
+            System.out.println("articleId = " + article.getId());
+        }
     }
 
     @Getter
