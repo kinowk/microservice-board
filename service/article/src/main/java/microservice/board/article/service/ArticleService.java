@@ -30,20 +30,20 @@ public class ArticleService {
     }
 
     @Transactional
-    public ArticleResponse update(Long id, ArticleUpdateRequest request) {
-        Article article = articleRepository.findById(id).orElseThrow();
+    public ArticleResponse update(Long articleId, ArticleUpdateRequest request) {
+        Article article = articleRepository.findById(articleId).orElseThrow();
         article.update(request.getTitle(), request.getContent());
         return ArticleResponse.from(article);
     }
 
-    public ArticleResponse read(Long id) {
-        Article article = articleRepository.findById(id).orElseThrow();
+    public ArticleResponse read(Long articleId) {
+        Article article = articleRepository.findById(articleId).orElseThrow();
         return ArticleResponse.from(article);
     }
 
     @Transactional
-    public void delete(Long id) {
-        Article article = articleRepository.findById(id).orElseThrow();
+    public void delete(Long articleId) {
+        Article article = articleRepository.findById(articleId).orElseThrow();
         articleRepository.delete(article);
     }
 

@@ -41,9 +41,9 @@ public class ArticleApiTest {
         System.out.println("response = " + response);
     }
 
-    ArticleResponse read(Long id) {
+    ArticleResponse read(Long articleId) {
         return restClient.get()
-                .uri("/v1/articles/{articleId}", id)
+                .uri("/v1/articles/{articleId}", articleId)
                 .retrieve()
                 .body(ArticleResponse.class);
     }
@@ -59,13 +59,13 @@ public class ArticleApiTest {
         );
         System.out.println("updateResponse = " + updateResponse);
 
-        ArticleResponse readResponse = read(updateResponse.getId());
+        ArticleResponse readResponse = read(updateResponse.getArticleId());
         System.out.println("readResponse = " + readResponse);
     }
 
-    ArticleResponse update(Long id, ArticleUpdateRequest request) {
+    ArticleResponse update(Long articleId, ArticleUpdateRequest request) {
         return restClient.put()
-                .uri("/v1/articles/{articleId}", id)
+                .uri("/v1/articles/{articleId}", articleId)
                 .body(request)
                 .retrieve()
                 .body(ArticleResponse.class);
@@ -76,9 +76,9 @@ public class ArticleApiTest {
         delete(333609731439022080L);
     }
 
-    void delete(Long id) {
+    void delete(Long articleId) {
         restClient.delete()
-                .uri("/v1/articles/{articleId}", id)
+                .uri("/v1/articles/{articleId}", articleId)
                 .retrieve();
     }
 
@@ -92,7 +92,7 @@ public class ArticleApiTest {
         System.out.println("response.getArticles() = " + response.getArticles());
         System.out.println("response.getCount() = " + response.getCount());
         for (ArticleResponse article : response.getArticles()) {
-            System.out.println("articleId = " + article.getId());
+            System.out.println("articleId = " + article.getArticleId());
         }
     }
 
@@ -106,17 +106,17 @@ public class ArticleApiTest {
 
         System.out.println("first page");
         for (ArticleResponse response : articles1) {
-            System.out.println("response.articleId() = " + response.getId());
+            System.out.println("response.articleId() = " + response.getArticleId());
         }
 
-        Long lastArticleId = articles1.getLast().getId();
+        Long lastArticleId = articles1.getLast().getArticleId();
         List<ArticleResponse> articles2 = restClient.get()
                 .uri("/v1/articles/infinite-scroll?boardId=1&pageSize=5&lastArticleId=%s".formatted(lastArticleId))
                 .retrieve()
                 .body(new ParameterizedTypeReference<List<ArticleResponse>>() {
                 });
         for (ArticleResponse response : articles2) {
-            System.out.println("response.articleId() = " + response.getId());
+            System.out.println("response.articleId() = " + response.getArticleId());
         }
     }
 

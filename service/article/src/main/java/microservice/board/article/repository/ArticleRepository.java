@@ -24,7 +24,7 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
             nativeQuery = true
     )
     List<Article> findAll(
-            @Param("boardId") Long boradId,
+            @Param("boardId") Long boardId,
             @Param("offset") Long offset,
             @Param("limit") Long limit
     );

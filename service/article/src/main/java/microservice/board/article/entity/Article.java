@@ -20,7 +20,7 @@ public class Article {
 
     @Id
     @Column(name = "article_id", nullable = false, updatable = false)
-    private Long id;
+    private Long articleId;
 
     @Column(name = "title", nullable = false)
     private String title;
@@ -42,7 +42,7 @@ public class Article {
 
     public static Article create(Long id, String title, String content, Long boardId, Long writerId) {
         Article article = new Article();
-        article.id = id;
+        article.articleId = id;
         article.title = title;
         article.content = content;
         article.boardId = boardId;

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ArticleResponse {
 
-    private Long id;
+    private Long articleId;
     private String title;
     private String content;
     private Long boardId;
@@ -23,7 +23,7 @@ public class ArticleResponse {
 
     public static ArticleResponse from(Article article) {
         ArticleResponse articleResponse = new ArticleResponse();
-        articleResponse.id = article.getId();
+        articleResponse.articleId = article.getArticleId();
         articleResponse.title = article.getTitle();
         articleResponse.content = article.getContent();
         articleResponse.boardId = article.getBoardId();
