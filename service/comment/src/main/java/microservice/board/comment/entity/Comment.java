@@ -34,7 +34,7 @@ public class Comment {
     @Column(name = "writer_id", nullable = false, updatable = false)
     private Long writerId;
 
-    @Column(name = "deleted", nullable = false, updatable = false)
+    @Column(name = "deleted", nullable = false)
     private Boolean deleted;
 
     @Column(name = "created_at", nullable = false, updatable = false)
