@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CommentResponse {
 
-    private Long id;
+    private Long commentId;
     private String content;
     private Long articleId;
     private Long parentCommentId;
@@ -23,7 +23,7 @@ public class CommentResponse {
 
     public static CommentResponse from(Comment comment) {
         CommentResponse response = new CommentResponse();
-        response.id = comment.getCommentId();
+        response.commentId = comment.getCommentId();
         response.content = comment.getContent();
         response.articleId = comment.getArticleId();
         response.parentCommentId = comment.getParentCommentId();
