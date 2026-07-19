@@ -1,11 +1,11 @@
-package microservice.board.service;
+package microservice.board.comment.service;
 
 import lombok.RequiredArgsConstructor;
 import microservice.board.common.snowflake.Snowflake;
-import microservice.board.controller.request.CommentCreateRequest;
-import microservice.board.controller.response.CommentResponse;
-import microservice.board.entity.Comment;
-import microservice.board.repository.CommentRepository;
+import microservice.board.comment.controller.request.CommentCreateRequest;
+import microservice.board.comment.controller.response.CommentResponse;
+import microservice.board.comment.entity.Comment;
+import microservice.board.comment.repository.CommentRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,10 +1,10 @@
-package microservice.board.controller.response;
+package microservice.board.comment.controller.response;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import microservice.board.entity.Comment;
+import microservice.board.comment.entity.Comment;
 
 import java.time.LocalDateTime;
 

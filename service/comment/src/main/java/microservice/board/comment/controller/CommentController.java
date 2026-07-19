@@ -1,9 +1,9 @@
-package microservice.board.controller;
+package microservice.board.comment.controller;
 
 import lombok.RequiredArgsConstructor;
-import microservice.board.controller.request.CommentCreateRequest;
-import microservice.board.controller.response.CommentResponse;
-import microservice.board.service.CommentService;
+import microservice.board.comment.controller.request.CommentCreateRequest;
+import microservice.board.comment.controller.response.CommentResponse;
+import microservice.board.comment.service.CommentService;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor

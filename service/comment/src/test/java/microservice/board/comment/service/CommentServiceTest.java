@@ -1,7 +1,8 @@
-package microservice.board.service;
+package microservice.board.comment.service;
 
-import microservice.board.entity.Comment;
-import microservice.board.repository.CommentRepository;
+import microservice.board.comment.entity.Comment;
+import microservice.board.comment.repository.CommentRepository;
+import microservice.board.comment.service.CommentService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

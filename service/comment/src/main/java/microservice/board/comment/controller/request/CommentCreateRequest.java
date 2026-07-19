@@ -1,4 +1,4 @@
-package microservice.board.controller.request;
+package microservice.board.comment.controller.request;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -12,5 +12,5 @@ public class CommentCreateRequest {
     private String content;
     private Long parentCommentId;
     private Long writerId;
-    
+
 }
