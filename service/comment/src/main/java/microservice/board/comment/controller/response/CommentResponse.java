@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import microservice.board.comment.entity.Comment;
+import microservice.board.comment.entity.CommentV2;
 
 import java.time.LocalDateTime;
 
@@ -19,6 +20,7 @@ public class CommentResponse {
     private Long parentCommentId;
     private Long writerId;
     private Boolean deleted;
+    private String path;
     private LocalDateTime createdAt;
 
     public static CommentResponse from(Comment comment) {
@@ -27,6 +29,18 @@ public class CommentResponse {
         response.content = comment.getContent();
         response.articleId = comment.getArticleId();
         response.parentCommentId = comment.getParentCommentId();
+        response.writerId = comment.getWriterId();
+        response.deleted = comment.getDeleted();
+        response.createdAt = comment.getCreatedAt();
+        return response;
+    }
+
+    public static CommentResponse from(CommentV2 comment) {
+        CommentResponse response = new CommentResponse();
+        response.commentId = comment.getCommentId();
+        response.content = comment.getContent();
+        response.path = comment.getCommentPath().getPath();
+        response.articleId = comment.getArticleId();
         response.writerId = comment.getWriterId();
         response.deleted = comment.getDeleted();
         response.createdAt = comment.getCreatedAt();

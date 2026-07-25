@@ -12,5 +12,4 @@ public class CommentCreateRequest {
     private String content;
     private Long parentCommentId;
     private Long writerId;
-
 }
