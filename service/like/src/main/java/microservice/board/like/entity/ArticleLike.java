@@ -23,7 +23,7 @@ public class ArticleLike {
     private Long id;
 
     @Column(name = "article_id", nullable = false, updatable = false)
-    private Long articleId;
+    private Long articleId; // shard key
 
     @Column(name = "user_id", nullable = false, updatable = false)
     private Long userId;
