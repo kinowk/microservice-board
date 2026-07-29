@@ -4,8 +4,10 @@ import lombok.RequiredArgsConstructor;
 import microservice.board.comment.controller.request.CommentCreateRequestV2;
 import microservice.board.comment.controller.response.CommentPageResponse;
 import microservice.board.comment.controller.response.CommentResponse;
+import microservice.board.comment.entity.ArticleCommentCount;
 import microservice.board.comment.entity.CommentPath;
 import microservice.board.comment.entity.CommentV2;
+import microservice.board.comment.repository.ArticleCommentCountRepository;
 import microservice.board.comment.repository.CommentRepositoryV2;
 import microservice.board.common.snowflake.Snowflake;
 import org.springframework.stereotype.Service;
@@ -22,6 +24,7 @@ public class CommentServiceV2 {
 
     private final Snowflake snowflake = new Snowflake();
     private final CommentRepositoryV2 commentRepository;
+    private final ArticleCommentCountRepository articleCommentCountRepository;
 
     @Transactional
     public CommentResponse create(CommentCreateRequestV2 request) {
@@ -39,6 +42,13 @@ public class CommentServiceV2 {
                         )
                 )
         );
+
+        int result = articleCommentCountRepository.increase(request.getArticleId());
+        if (result == 0) {
+            articleCommentCountRepository.save(
+                    ArticleCommentCount.init(request.getArticleId(), 1L)
+            );
+        }
 
         return CommentResponse.from(comment);
     }
@@ -83,6 +93,7 @@ public class CommentServiceV2 {
 
     private void delete(CommentV2 comment) {
         commentRepository.delete(comment);
+        articleCommentCountRepository.decrease(comment.getArticleId());
 
         if (!comment.isRoot()) {
             commentRepository.findByArticleIdAndPath(comment.getArticleId(), comment.getCommentPath().getPath())
@@ -113,5 +124,11 @@ public class CommentServiceV2 {
         return comments.stream()
                 .map(CommentResponse::from)
                 .toList();
+    }
+
+    public Long count(Long articleId) {
+        return articleCommentCountRepository.findById(articleId)
+                .map(ArticleCommentCount::getCommentCount)
+                .orElse(0L);
     }
 }
