@@ -1,0 +1,36 @@
+package microservice.board.hotarticle.service.eventhandler;
+
+import lombok.RequiredArgsConstructor;
+import microservice.board.common.event.Event;
+import microservice.board.common.event.EventType;
+import microservice.board.common.event.payload.ArticleViewedEventPayload;
+import microservice.board.hotarticle.repository.ArticleViewCountRepository;
+import microservice.board.hotarticle.utils.TimeCalculatorUtils;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class ArticleViewedEventHandler implements EventHandler<ArticleViewedEventPayload> {
+
+    private final ArticleViewCountRepository articleViewCountRepository;
+
+    @Override
+    public void handle(Event<ArticleViewedEventPayload> event) {
+        ArticleViewedEventPayload payload = event.getPayload();
+        articleViewCountRepository.createOrUpdate(
+                payload.getArticleId(),
+                payload.getArticleViewCount(),
+                TimeCalculatorUtils.calculateDurationToMidnight()
+        );
+    }
+
+    @Override
+    public boolean supports(Event<ArticleViewedEventPayload> event) {
+        return EventType.ARTICLE_UNLIKED == event.getType();
+    }
+
+    @Override
+    public Long findArticleId(Event<ArticleViewedEventPayload> event) {
+        return event.getPayload().getArticleId();
+    }
+}
