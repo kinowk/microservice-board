@@ -20,7 +20,7 @@ public class ArticleLike {
 
     @Id
     @Column(name = "article_like_id", nullable = false, updatable = false)
-    private Long id;
+    private Long articleLikeId;
 
     @Column(name = "article_id", nullable = false, updatable = false)
     private Long articleId; // shard key
@@ -33,7 +33,7 @@ public class ArticleLike {
 
     public static ArticleLike create(Long id, Long articleId, Long userId) {
         ArticleLike articleLike = new ArticleLike();
-        articleLike.id = id;
+        articleLike.articleLikeId = id;
         articleLike.articleId = articleId;
         articleLike.userId = userId;
         articleLike.createdAt = LocalDateTime.now();

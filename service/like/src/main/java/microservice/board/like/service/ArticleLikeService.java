@@ -55,7 +55,7 @@ public class ArticleLikeService {
         outboxEventPublisher.publish(
                 EventType.ARTICLE_LIKED,
                 ArticleLikedEventPayload.builder()
-                        .articleLikeId(articleLike.getId())
+                        .articleLikeId(articleLike.getArticleLikeId())
                         .articleId(articleLike.getArticleId())
                         .userId(articleLike.getUserId())
                         .createdAt(articleLike.getCreatedAt())
@@ -75,7 +75,7 @@ public class ArticleLikeService {
                     outboxEventPublisher.publish(
                             EventType.ARTICLE_UNLIKED,
                             ArticleUnlikedEventPayload.builder()
-                                    .articleLikeId(articleLike.getId())
+                                    .articleLikeId(articleLike.getArticleLikeId())
                                     .articleId(articleLike.getArticleId())
                                     .userId(articleLike.getUserId())
                                     .createdAt(articleLike.getCreatedAt())
