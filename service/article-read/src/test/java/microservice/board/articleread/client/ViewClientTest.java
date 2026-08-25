@@ -39,10 +39,10 @@ class ViewClientTest {
                     viewClient.count(1L);
                     latch.countDown();
                 });
-                latch.await();
-                TimeUnit.SECONDS.sleep(2);
-                System.out.println("=== cache expired ===");
             }
+            latch.await();
+            TimeUnit.SECONDS.sleep(2);
+            System.out.println("=== cache expired ===");
         }
     }
 }
