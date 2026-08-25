@@ -3,6 +3,7 @@ package microservice.board.articleread.client;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import microservice.board.articleread.cache.OptimizedCacheable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
@@ -23,7 +24,8 @@ public class ViewClient {
         restClient = RestClient.create(viewServiceUrl);
     }
 
-    @Cacheable(key = "#articleId", value = "articleViewCount")
+//    @Cacheable(key = "#articleId", value = "articleViewCount")
+    @OptimizedCacheable(type = "articleViewCount", ttlSeconds = 1)
     public long count(Long articleId) {
         log.info("[ViewClient.count] articleId: {}", articleId);
 
