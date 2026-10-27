@@ -29,6 +29,17 @@ public class ArticleController {
         return ArticleResponse.Page.from(result);
     }
 
+    @GetMapping("/v1/articles/infinite-scroll")
+    public ArticleResponse.Cursor readAllInfiniteScroll(
+            @RequestParam("boardId") Long boardId,
+            @RequestParam("pageSize") Long pageSize,
+            @RequestParam(value = "lastArticleId", required = false) Long lastArticleId
+    ) {
+        ArticleCommand.Cursor command = ArticleCommand.Cursor.of(boardId, pageSize, lastArticleId);
+        ArticleResult.Cursor result = articleService.readAllInfiniteScroll(command);
+        return ArticleResponse.Cursor.from(result);
+    }
+
     @PostMapping("/v1/articles")
     public ArticleResponse.Create create(@RequestBody ArticleRequest.Create request) {
         ArticleResult.Create result = articleService.create(request.toCommand());

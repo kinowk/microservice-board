@@ -13,14 +13,15 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
 
     /**
      * select article.article_id, article.title, article.content, article.board_id, article.writer_id,
-     *        article.created_at, article.updated_at
+     * article.created_at, article.updated_at
      * from (
-     *      select article_id
-     *      from article
-     *      where board_id = :boardId
-     *      order by article_id desc
-     *      limit :limit offset: offset
+     * select article_id
+     * from article
+     * where board_id = :boardId
+     * order by article_id desc
+     * limit :limit offset: offset
      * ) t left outer join article on t.article_id = article.article_id
+     *
      * @param boardId
      * @param offset
      * @param limit
@@ -34,7 +35,7 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
                     "   from article " +
                     "   where board_id = :boardId " +
                     "   order by article_id desc " +
-                    "   limit :limit offset :offset "+
+                    "   limit :limit offset :offset " +
                     ") t left outer join article on t.article_id = article.article_id",
             nativeQuery = true
     )
@@ -47,11 +48,12 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     /**
      * select count(*)
      * from (
-     *      select article_id
-     *      from article
-     *      where board_id = :boardId
-     *      limit :limit
+     * select article_id
+     * from article
+     * where board_id = :boardId
+     * limit :limit
      * ) t
+     *
      * @param boardId
      * @param limit
      * @return
@@ -69,5 +71,57 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     long count(
             @Param("boardId") Long boardId,
             @Param("limit") Long limit
+    );
+
+    /**
+     * select *
+     * from article
+     * where board_id = :boardId
+     * order by article_id desc
+     * limit :limit
+     * @param boardId
+     * @param limit
+     * @return
+     */
+    @Query(
+            value = "select article.article_id, article.title, article.content, article.board_id, article.writer_id, " +
+                    "       article.created_at, article.updated_at " +
+                    "from article " +
+                    "where board_id = :boardId " +
+                    "order by article_id desc " +
+                    "limit :limit",
+            nativeQuery = true
+    )
+    List<Article> readAllInfiniteScroll(
+            @Param("boardId") Long boardId,
+            @Param("limit") Long limit
+    );
+
+    /**
+     * select *
+     * from article
+     * where board_id = :boardId
+     * and article_id < :lastArticleId
+     * order by article_id desc
+     * limit :limit
+     * @param boardId
+     * @param limit
+     * @param lastArticleId
+     * @return
+     */
+    @Query(
+            value = "select article.article_id, article.title, article.content, article.board_id, article.writer_id, " +
+                    "       article.created_at, article.updated_at " +
+                    "from article " +
+                    "where board_id = :boardId " +
+                    "and article_id < :lastArticleId " +
+                    "order by article_id desc " +
+                    "limit :limit",
+            nativeQuery = true
+    )
+    List<Article> readAllInfiniteScroll(
+            @Param("boardId") Long boardId,
+            @Param("limit") Long limit,
+            @Param("lastArticleId") Long lastArticleId
     );
 }

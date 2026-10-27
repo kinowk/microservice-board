@@ -88,4 +88,17 @@ public class ArticleResponse {
             );
         }
     }
+
+    public record Cursor(
+            List<Read> articles
+    ) {
+        public static Cursor from(ArticleResult.Cursor result) {
+            return new Cursor(
+                    result.articles()
+                            .stream()
+                            .map(Read::from)
+                            .toList()
+            );
+        }
+    }
 }

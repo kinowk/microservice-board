@@ -7,6 +7,8 @@ import microservice.board.common.snowflake.Snowflake;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -57,5 +59,12 @@ public class ArticleService {
                         PageLimitCalculator.calculatePageLimit(command.page(), command.pageSize(), 10L)
                 )
         );
+    }
+
+    public ArticleResult.Cursor readAllInfiniteScroll(ArticleCommand.Cursor command) {
+        List<Article> articles = command.lastArticleId() == null ?
+                articleRepository.readAllInfiniteScroll(command.boardId(), command.pageSize()) :
+                articleRepository.readAllInfiniteScroll(command.boardId(), command.pageSize(), command.lastArticleId());
+        return ArticleResult.Cursor.from(articles);
     }
 }

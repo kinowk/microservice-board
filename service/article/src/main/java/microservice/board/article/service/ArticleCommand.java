@@ -29,4 +29,14 @@ public class ArticleCommand {
             return new Page(boardId, page, pageSize);
         }
     }
+
+    public record Cursor(
+            Long boardId,
+            Long pageSize,
+            Long lastArticleId
+    ) {
+        public static Cursor of(Long boardId, Long pageSize, Long lastArticleId) {
+            return new Cursor(boardId, pageSize, lastArticleId);
+        }
+    }
 }
