@@ -4,6 +4,8 @@ import microservice.board.article.controller.ArticleResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.web.client.RestClient;
 
+import java.util.List;
+
 class ArticleApiTest {
 
     RestClient restClient = RestClient.create("http://127.0.0.1:9000");
@@ -70,6 +72,25 @@ class ArticleApiTest {
         restClient.delete()
                 .uri("/v1/articles/{articleId}", articleId)
                 .retrieve();
+    }
+
+    @Test
+    void readAllArticles() {
+        ArticleResponse.Page response = readAll();
+        List<ArticleResponse.Read> articles = response.articles();
+        long count = response.articleCount();
+        System.out.println("articles = " + articles);
+        System.out.println("count = " + count);
+        for (ArticleResponse.Read article : articles) {
+            System.out.println("article = " + article);
+        }
+    }
+
+    ArticleResponse.Page readAll() {
+        return restClient.get()
+                .uri("/v1/articles?boardId=1&page=300&pageSize=50")
+                .retrieve()
+                .body(ArticleResponse.Page.class);
     }
 
     static class ArticleRequest {
