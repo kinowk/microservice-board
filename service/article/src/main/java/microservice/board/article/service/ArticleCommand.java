@@ -19,4 +19,14 @@ public class ArticleCommand {
             String content
     ) {
     }
+
+    public record Page(
+            Long boardId,
+            Long page,
+            Long pageSize
+    ) {
+        public static Page of(Long boardId, Long page, Long pageSize) {
+            return new Page(boardId, page, pageSize);
+        }
+    }
 }

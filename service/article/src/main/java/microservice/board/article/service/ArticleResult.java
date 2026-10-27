@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import microservice.board.article.entity.Article;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ArticleResult {
@@ -70,6 +71,20 @@ public class ArticleResult {
                     article.getWriterId(),
                     article.getCreatedAt(),
                     article.getUpdatedAt()
+            );
+        }
+    }
+
+    public record Page(
+            List<Read> articles,
+            long articleCount
+    ) {
+        public static Page of(List<Article> articles, long articleCount) {
+            return new Page(
+                    articles.stream()
+                            .map(Read::from)
+                            .toList(),
+                    articleCount
             );
         }
     }

@@ -45,4 +45,17 @@ public class ArticleService {
         Article article = articleRepository.findById(articleId).orElseThrow();
         articleRepository.delete(article);
     }
+
+    public ArticleResult.Page readAll(ArticleCommand.Page command) {
+        return ArticleResult.Page.of(
+                articleRepository.findAll(
+                        command.boardId(),
+                        (command.page() - 1) * command.pageSize(), command.pageSize()
+                ),
+                articleRepository.count(
+                        command.boardId(),
+                        PageLimitCalculator.calculatePageLimit(command.page(), command.pageSize(), 10L)
+                )
+        );
+    }
 }

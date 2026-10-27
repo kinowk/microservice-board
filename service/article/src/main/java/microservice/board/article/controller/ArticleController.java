@@ -1,6 +1,7 @@
 package microservice.board.article.controller;
 
 import lombok.RequiredArgsConstructor;
+import microservice.board.article.service.ArticleCommand;
 import microservice.board.article.service.ArticleResult;
 import microservice.board.article.service.ArticleService;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,17 @@ public class ArticleController {
     public ArticleResponse.Read read(@PathVariable("articleId") Long articleId) {
         ArticleResult.Read result = articleService.read(articleId);
         return ArticleResponse.Read.from(result);
+    }
+
+    @GetMapping("/v1/articles")
+    public ArticleResponse.Page readAll(
+            @RequestParam("boardId") Long boardId,
+            @RequestParam("page") Long page,
+            @RequestParam("pageSize") Long pageSize
+    ) {
+        ArticleCommand.Page command = ArticleCommand.Page.of(boardId, page, pageSize);
+        ArticleResult.Page result = articleService.readAll(command);
+        return ArticleResponse.Page.from(result);
     }
 
     @PostMapping("/v1/articles")
