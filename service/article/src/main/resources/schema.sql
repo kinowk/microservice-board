@@ -31,3 +31,19 @@ from (
     where board_id = 1
     limit 300301
 ) sub;
+
+/* 무한 스크롤 설계 */
+/* 1번 페이지 */
+select *
+from article
+where board_id = {board_id}
+order by article_id desc
+limit {limit};
+
+/* 2번 페이지 이상 */
+select *
+from article
+where board_id = {board_Id}
+and article_id < {last_article_id}
+order by article_id desc
+limit {limit};
