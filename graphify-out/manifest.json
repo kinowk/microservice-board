@@ -1,0 +1,1022 @@
+{
+  "build.gradle": {
+    "mtime": 1793190935.8126967,
+    "seen": 1793191093.492783,
+    "ast_hash": "002d570ca87815740ad5c4746de1bb79",
+    "semantic_hash": "002d570ca87815740ad5c4746de1bb79"
+  },
+  "common/data-serializer/build.gradle": {
+    "mtime": 1793190935.8134453,
+    "seen": 1793191093.492788,
+    "ast_hash": "d1e38ee59272669acc972cbefa1e7c7c",
+    "semantic_hash": "d1e38ee59272669acc972cbefa1e7c7c"
+  },
+  "common/data-serializer/src/main/java/microservice/board/common/dataserializer/DataSerializer.java": {
+    "mtime": 1793190935.8140101,
+    "seen": 1793191093.49279,
+    "ast_hash": "88561e9c7bbe92ba13fceece8474477f",
+    "semantic_hash": "88561e9c7bbe92ba13fceece8474477f"
+  },
+  "common/event/build.gradle": {
+    "mtime": 1793190935.8141444,
+    "seen": 1793191093.492791,
+    "ast_hash": "c25570aac839ce2bd9eb0c38cae5a0cc",
+    "semantic_hash": "c25570aac839ce2bd9eb0c38cae5a0cc"
+  },
+  "common/event/src/main/java/microservice/board/common/event/Event.java": {
+    "mtime": 1793190935.8148282,
+    "seen": 1793191093.4927921,
+    "ast_hash": "d2275b13b97c8649deff9b1c9ca59c12",
+    "semantic_hash": "d2275b13b97c8649deff9b1c9ca59c12"
+  },
+  "common/event/src/main/java/microservice/board/common/event/EventPayload.java": {
+    "mtime": 1793190935.8149555,
+    "seen": 1793191093.492794,
+    "ast_hash": "5d3b98ba0ef585ba40ae94b6bc5c89ba",
+    "semantic_hash": "5d3b98ba0ef585ba40ae94b6bc5c89ba"
+  },
+  "common/event/src/main/java/microservice/board/common/event/EventType.java": {
+    "mtime": 1793190935.8150835,
+    "seen": 1793191093.492795,
+    "ast_hash": "9289639c21721e3415abd36795facd1b",
+    "semantic_hash": "9289639c21721e3415abd36795facd1b"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/ArticleCreatedEventPayload.java": {
+    "mtime": 1793190935.8154576,
+    "seen": 1793191093.492796,
+    "ast_hash": "7a2ccf6a436e60fc16d8b218397bb0dc",
+    "semantic_hash": "7a2ccf6a436e60fc16d8b218397bb0dc"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/ArticleDeletedEventPayload.java": {
+    "mtime": 1793190935.8156307,
+    "seen": 1793191093.492797,
+    "ast_hash": "a9df79324ed099cd7a10c778206af0c9",
+    "semantic_hash": "a9df79324ed099cd7a10c778206af0c9"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/ArticleLikedEventPayload.java": {
+    "mtime": 1793190935.8157806,
+    "seen": 1793191093.4927979,
+    "ast_hash": "ceefb8205d01c60a5595b4449d37a78d",
+    "semantic_hash": "ceefb8205d01c60a5595b4449d37a78d"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/ArticleUnlikedEventPayload.java": {
+    "mtime": 1793190935.8159294,
+    "seen": 1793191093.4927979,
+    "ast_hash": "41cadc0d6a16a849177484c94677dac1",
+    "semantic_hash": "41cadc0d6a16a849177484c94677dac1"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/ArticleUpdatedEventPayload.java": {
+    "mtime": 1793190935.8160586,
+    "seen": 1793191093.492799,
+    "ast_hash": "fc7aff4603a0b2ec8531d811477dcd39",
+    "semantic_hash": "fc7aff4603a0b2ec8531d811477dcd39"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/ArticleViewedEventPayload.java": {
+    "mtime": 1793190935.816185,
+    "seen": 1793191093.492801,
+    "ast_hash": "3d69316eb586af730a16c7345b62a9c2",
+    "semantic_hash": "3d69316eb586af730a16c7345b62a9c2"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/CommentCreatedEventPayload.java": {
+    "mtime": 1793190935.816322,
+    "seen": 1793191093.4928021,
+    "ast_hash": "3c675d7d0db046bfff87bf888987b464",
+    "semantic_hash": "3c675d7d0db046bfff87bf888987b464"
+  },
+  "common/event/src/main/java/microservice/board/common/event/payload/CommentDeletedEventPayload.java": {
+    "mtime": 1793190935.8164527,
+    "seen": 1793191093.492803,
+    "ast_hash": "11b5629ccd6eaf9d2fd38edafd80b126",
+    "semantic_hash": "11b5629ccd6eaf9d2fd38edafd80b126"
+  },
+  "common/event/src/test/java/microservice/board/common/event/EventTest.java": {
+    "mtime": 1793190935.8172328,
+    "seen": 1793191093.492804,
+    "ast_hash": "960fb41c43fe8d4bd32e4e32df62e989",
+    "semantic_hash": "960fb41c43fe8d4bd32e4e32df62e989"
+  },
+  "common/outbox-message-relay/build.gradle": {
+    "mtime": 1793190935.817379,
+    "seen": 1793191093.492805,
+    "ast_hash": "5c1cf7d2891d29e30b5612457940cae3",
+    "semantic_hash": "5c1cf7d2891d29e30b5612457940cae3"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/AssignedShard.java": {
+    "mtime": 1793190935.8179927,
+    "seen": 1793191093.492806,
+    "ast_hash": "e3df8a75ad35b29429e2df3229fb2ac5",
+    "semantic_hash": "e3df8a75ad35b29429e2df3229fb2ac5"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/MessageRelay.java": {
+    "mtime": 1793190935.818515,
+    "seen": 1793191093.492807,
+    "ast_hash": "2ae98b9477275b376f5eda117c16f898",
+    "semantic_hash": "2ae98b9477275b376f5eda117c16f898"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/MessageRelayConfig.java": {
+    "mtime": 1793190935.8186212,
+    "seen": 1793191093.4928079,
+    "ast_hash": "2449e51fe16689d5c63cb04623f92fcc",
+    "semantic_hash": "2449e51fe16689d5c63cb04623f92fcc"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/MessageRelayConstants.java": {
+    "mtime": 1793190935.8190007,
+    "seen": 1793191093.492809,
+    "ast_hash": "71a4bb507983f696b2abcf7ec35e86e6",
+    "semantic_hash": "71a4bb507983f696b2abcf7ec35e86e6"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/MessageRelayCoordinator.java": {
+    "mtime": 1793190935.8191457,
+    "seen": 1793191093.49281,
+    "ast_hash": "a830a0d528c1d1a65cc2bea5345fc87b",
+    "semantic_hash": "a830a0d528c1d1a65cc2bea5345fc87b"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/Outbox.java": {
+    "mtime": 1793190935.819269,
+    "seen": 1793191093.492812,
+    "ast_hash": "654edca0b85a79dce8bbcedb8fcdd4b3",
+    "semantic_hash": "654edca0b85a79dce8bbcedb8fcdd4b3"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/OutboxEvent.java": {
+    "mtime": 1793190935.8194067,
+    "seen": 1793191093.492813,
+    "ast_hash": "1a085097a54f9071001fa5f9ea4d7938",
+    "semantic_hash": "1a085097a54f9071001fa5f9ea4d7938"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/OutboxEventPublisher.java": {
+    "mtime": 1793190935.8195255,
+    "seen": 1793191093.492814,
+    "ast_hash": "2e666a7c4f8765a89a1465eb918e5cd6",
+    "semantic_hash": "2e666a7c4f8765a89a1465eb918e5cd6"
+  },
+  "common/outbox-message-relay/src/main/java/microservice/board/common/outboxmessagerelay/OutboxRepository.java": {
+    "mtime": 1793190935.8196325,
+    "seen": 1793191093.492815,
+    "ast_hash": "de8a21aa2debb34ca64056068ee090c8",
+    "semantic_hash": "de8a21aa2debb34ca64056068ee090c8"
+  },
+  "common/outbox-message-relay/src/test/java/microservice/board/common/outboxmessagerelay/AssignedShardTest.java": {
+    "mtime": 1793190935.8205657,
+    "seen": 1793191093.492816,
+    "ast_hash": "35f0f305443229f7cd5c5cd9e979db63",
+    "semantic_hash": "35f0f305443229f7cd5c5cd9e979db63"
+  },
+  "common/snowflake/build.gradle": {
+    "mtime": 1793019595.2731414,
+    "seen": 1793191093.492816,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "common/snowflake/src/main/java/microservice/board/common/snowflake/Snowflake.java": {
+    "mtime": 1793190935.8216162,
+    "seen": 1793191093.492817,
+    "ast_hash": "d7ad4ad7d805589520315816c71a081e",
+    "semantic_hash": "d7ad4ad7d805589520315816c71a081e"
+  },
+  "common/snowflake/src/test/java/microservice/board/common/snowflake/SnowflakeTest.java": {
+    "mtime": 1793190935.8221066,
+    "seen": 1793191093.4928179,
+    "ast_hash": "01a34fbdcd70105bd47fe73aee455af9",
+    "semantic_hash": "01a34fbdcd70105bd47fe73aee455af9"
+  },
+  "gradlew": {
+    "mtime": 1782651360.4487884,
+    "seen": 1793191093.4928179,
+    "ast_hash": "45bf2667b1fbec0e07e42808dc662b6b",
+    "semantic_hash": "45bf2667b1fbec0e07e42808dc662b6b"
+  },
+  "service/article-read/build.gradle": {
+    "mtime": 1793190935.8226469,
+    "seen": 1793191093.4928188,
+    "ast_hash": "84057a4529779dce0a4d616966fad07c",
+    "semantic_hash": "84057a4529779dce0a4d616966fad07c"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/ArticleReadApplication.java": {
+    "mtime": 1782652354.9753911,
+    "seen": 1793191093.49282,
+    "ast_hash": "379da697de0efe1f6ecb33c5318cb878",
+    "semantic_hash": "379da697de0efe1f6ecb33c5318cb878"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCache.java": {
+    "mtime": 1793190935.8229148,
+    "seen": 1793191093.492821,
+    "ast_hash": "b34a50e852859c42d5b5063ee70d83f0",
+    "semantic_hash": "b34a50e852859c42d5b5063ee70d83f0"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCacheAspect.java": {
+    "mtime": 1793190935.8230455,
+    "seen": 1793191093.492821,
+    "ast_hash": "d57108a0467c0309fb9c723b54e7a73e",
+    "semantic_hash": "d57108a0467c0309fb9c723b54e7a73e"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCacheLockProvider.java": {
+    "mtime": 1793190935.8231647,
+    "seen": 1793191093.492822,
+    "ast_hash": "4648f0d1f32699e6c285f3e06312cc26",
+    "semantic_hash": "4648f0d1f32699e6c285f3e06312cc26"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCacheManager.java": {
+    "mtime": 1793190935.8232636,
+    "seen": 1793191093.4928231,
+    "ast_hash": "de89c20f2b86625b25ebb4718695f71d",
+    "semantic_hash": "de89c20f2b86625b25ebb4718695f71d"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCacheOriginDataSupplier.java": {
+    "mtime": 1793190935.8234236,
+    "seen": 1793191093.492824,
+    "ast_hash": "528cc61d48aeba41e20917a1f2402781",
+    "semantic_hash": "528cc61d48aeba41e20917a1f2402781"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCacheTTL.java": {
+    "mtime": 1793190935.823538,
+    "seen": 1793191093.492824,
+    "ast_hash": "2c4f1858f37b337b64a3a1f55aaf325f",
+    "semantic_hash": "2c4f1858f37b337b64a3a1f55aaf325f"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/cache/OptimizedCacheable.java": {
+    "mtime": 1793190935.823633,
+    "seen": 1793191093.492825,
+    "ast_hash": "565bded7b87643e4307bcd1bfc71ccfa",
+    "semantic_hash": "565bded7b87643e4307bcd1bfc71ccfa"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/client/ArticleClient.java": {
+    "mtime": 1793190935.8239245,
+    "seen": 1793191093.4928262,
+    "ast_hash": "dc1e2782dc528876a3152ccbab3928a4",
+    "semantic_hash": "dc1e2782dc528876a3152ccbab3928a4"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/client/CommentClient.java": {
+    "mtime": 1793190935.8240266,
+    "seen": 1793191093.492827,
+    "ast_hash": "a99bcea2521ed89fe0aa23b0014c679e",
+    "semantic_hash": "a99bcea2521ed89fe0aa23b0014c679e"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/client/LikeClient.java": {
+    "mtime": 1793190935.8241155,
+    "seen": 1793191093.492828,
+    "ast_hash": "156121f2669cc2b035bdd8baaa5ef0e4",
+    "semantic_hash": "156121f2669cc2b035bdd8baaa5ef0e4"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/client/ViewClient.java": {
+    "mtime": 1793190935.824199,
+    "seen": 1793191093.4928288,
+    "ast_hash": "96c6118857546df2445b87454aeff2da",
+    "semantic_hash": "96c6118857546df2445b87454aeff2da"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/client/config/CacheConfig.java": {
+    "mtime": 1793190935.8243406,
+    "seen": 1793191093.49283,
+    "ast_hash": "f8b495adbf80355806a617edc7145378",
+    "semantic_hash": "f8b495adbf80355806a617edc7145378"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/client/config/KafkaConfig.java": {
+    "mtime": 1793190935.8244374,
+    "seen": 1793191093.492831,
+    "ast_hash": "d4168381c8c548858b175976cefc65f1",
+    "semantic_hash": "d4168381c8c548858b175976cefc65f1"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/consumer/ArticleReadEventConsumer.java": {
+    "mtime": 1793190935.8245895,
+    "seen": 1793191093.492832,
+    "ast_hash": "34f71bd64d1a97bc6ffa047edb3f6d68",
+    "semantic_hash": "34f71bd64d1a97bc6ffa047edb3f6d68"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/controller/ArticleReadController.java": {
+    "mtime": 1793190935.8249063,
+    "seen": 1793191093.4928331,
+    "ast_hash": "0fd98ea118817f260832a10294deccba",
+    "semantic_hash": "0fd98ea118817f260832a10294deccba"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/repository/ArticleIdListRepository.java": {
+    "mtime": 1793190935.8250682,
+    "seen": 1793191093.492834,
+    "ast_hash": "c7a2a55c9fc228f32da5aa3a244114bf",
+    "semantic_hash": "c7a2a55c9fc228f32da5aa3a244114bf"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/repository/ArticleQueryModel.java": {
+    "mtime": 1793190935.8251872,
+    "seen": 1793191093.492835,
+    "ast_hash": "177ea67af306febe769bd2aa2c5b88aa",
+    "semantic_hash": "177ea67af306febe769bd2aa2c5b88aa"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/repository/ArticleQueryModelRepository.java": {
+    "mtime": 1793190935.8254068,
+    "seen": 1793191093.492835,
+    "ast_hash": "81138d9c96f7ff65c1b65468f0c15dd8",
+    "semantic_hash": "81138d9c96f7ff65c1b65468f0c15dd8"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/repository/BoardArticleCountRepository.java": {
+    "mtime": 1793190935.8255079,
+    "seen": 1793191093.4928372,
+    "ast_hash": "dac1c47f46023b989553e3fd489b634a",
+    "semantic_hash": "dac1c47f46023b989553e3fd489b634a"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/ArticleReadService.java": {
+    "mtime": 1793190935.8257895,
+    "seen": 1793191093.4928372,
+    "ast_hash": "c0c0abbcde0373915188a21747bf5d48",
+    "semantic_hash": "c0c0abbcde0373915188a21747bf5d48"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/ArticleCreatedEventHandler.java": {
+    "mtime": 1793190935.8260198,
+    "seen": 1793191093.492838,
+    "ast_hash": "67242dfe3def690e10f588cfacd73646",
+    "semantic_hash": "67242dfe3def690e10f588cfacd73646"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/ArticleDeletedEventHandler.java": {
+    "mtime": 1793190935.8261151,
+    "seen": 1793191093.4928389,
+    "ast_hash": "d3491a0fbf4b6e957b87dd75bcdfe6ac",
+    "semantic_hash": "d3491a0fbf4b6e957b87dd75bcdfe6ac"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/ArticleLikedEventHandler.java": {
+    "mtime": 1793190935.8262208,
+    "seen": 1793191093.4928389,
+    "ast_hash": "c508b5076ffd834df4d3169dda531468",
+    "semantic_hash": "c508b5076ffd834df4d3169dda531468"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/ArticleUnlikedEventHandler.java": {
+    "mtime": 1793190935.826591,
+    "seen": 1793191093.49284,
+    "ast_hash": "88c7fba97b4341794b18c57cc8f7d0be",
+    "semantic_hash": "88c7fba97b4341794b18c57cc8f7d0be"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/ArticleUpdatedEventHandler.java": {
+    "mtime": 1793190935.8267903,
+    "seen": 1793191093.492841,
+    "ast_hash": "be9a617c9e0f9fdaa50718c7aafc3463",
+    "semantic_hash": "be9a617c9e0f9fdaa50718c7aafc3463"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/CommentCreatedEventHandler.java": {
+    "mtime": 1793190935.8270109,
+    "seen": 1793191093.492842,
+    "ast_hash": "8a0ce60a47e07fcb8c9cefa21f0a09aa",
+    "semantic_hash": "8a0ce60a47e07fcb8c9cefa21f0a09aa"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/CommentDeletedEventHandler.java": {
+    "mtime": 1793190935.8272767,
+    "seen": 1793191093.492843,
+    "ast_hash": "9d45080456f42fb34727e914d245f856",
+    "semantic_hash": "9d45080456f42fb34727e914d245f856"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/event/handler/EventHandler.java": {
+    "mtime": 1793190935.8274527,
+    "seen": 1793191093.492843,
+    "ast_hash": "a8234c63d556476eb1f745bd0c7fbb4b",
+    "semantic_hash": "a8234c63d556476eb1f745bd0c7fbb4b"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/response/ArticleReadPageResponse.java": {
+    "mtime": 1793190935.8277133,
+    "seen": 1793191093.492844,
+    "ast_hash": "f31ac585993867b759063a15003401ba",
+    "semantic_hash": "f31ac585993867b759063a15003401ba"
+  },
+  "service/article-read/src/main/java/microservice/board/articleread/service/response/ArticleReadResponse.java": {
+    "mtime": 1793190935.827876,
+    "seen": 1793191093.492845,
+    "ast_hash": "7aa5febe55548ba2fbbfc8bc2a45d3fd",
+    "semantic_hash": "7aa5febe55548ba2fbbfc8bc2a45d3fd"
+  },
+  "service/article-read/src/main/resources/application.yml": {
+    "mtime": 1793190935.8284364,
+    "seen": 1793191093.492846,
+    "ast_hash": "08b30fdb4e4db0ca29b0dd75099cda81",
+    "semantic_hash": "08b30fdb4e4db0ca29b0dd75099cda81"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/api/ArticleReadApiTest.java": {
+    "mtime": 1793190935.8291888,
+    "seen": 1793191093.4928472,
+    "ast_hash": "431b682604b59aabbc65f872c071abe6",
+    "semantic_hash": "431b682604b59aabbc65f872c071abe6"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/cache/OptimizedCacheManagerTest.java": {
+    "mtime": 1793190935.829466,
+    "seen": 1793191093.4928482,
+    "ast_hash": "ef90b59b1acf320c2dada27269378dae",
+    "semantic_hash": "ef90b59b1acf320c2dada27269378dae"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/cache/OptimizedCacheTTLTest.java": {
+    "mtime": 1793190935.8295643,
+    "seen": 1793191093.4928489,
+    "ast_hash": "db2e3661cb314f384f7214bbda4b1374",
+    "semantic_hash": "db2e3661cb314f384f7214bbda4b1374"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/cache/OptimizedCacheTest.java": {
+    "mtime": 1793190935.8296814,
+    "seen": 1793191093.4928489,
+    "ast_hash": "f15ae127e239ea121223bd78750508e7",
+    "semantic_hash": "f15ae127e239ea121223bd78750508e7"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/client/ViewClientTest.java": {
+    "mtime": 1793190935.8298957,
+    "seen": 1793191093.4928498,
+    "ast_hash": "5ac459cad166e8854879d59173da2c08",
+    "semantic_hash": "5ac459cad166e8854879d59173da2c08"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/data/DataInitializer.java": {
+    "mtime": 1793190935.8301866,
+    "seen": 1793191093.492851,
+    "ast_hash": "cdfeb24db1b0910f160d30a8577705e0",
+    "semantic_hash": "cdfeb24db1b0910f160d30a8577705e0"
+  },
+  "service/article-read/src/test/java/microservice/board/articleread/learning/LongToDoubleTest.java": {
+    "mtime": 1793190935.8303661,
+    "seen": 1793191093.492851,
+    "ast_hash": "219582e451b29d4bea379761c92580da",
+    "semantic_hash": "219582e451b29d4bea379761c92580da"
+  },
+  "service/article/build.gradle": {
+    "mtime": 1793190935.8306952,
+    "seen": 1793191093.492852,
+    "ast_hash": "4ccb5614240ba3b75e512ee7ddd61e25",
+    "semantic_hash": "4ccb5614240ba3b75e512ee7ddd61e25"
+  },
+  "service/article/src/main/java/microservice/board/article/ArticleApplication.java": {
+    "mtime": 1793190935.83138,
+    "seen": 1793191093.492853,
+    "ast_hash": "f7d663fa0c189bb9cb4aab2b08c6bc92",
+    "semantic_hash": "f7d663fa0c189bb9cb4aab2b08c6bc92"
+  },
+  "service/article/src/main/java/microservice/board/article/controller/ArticleController.java": {
+    "mtime": 1793190935.8315442,
+    "seen": 1793191093.492854,
+    "ast_hash": "ec40d01da66b98d12ebb39d7eb38a744",
+    "semantic_hash": "ec40d01da66b98d12ebb39d7eb38a744"
+  },
+  "service/article/src/main/java/microservice/board/article/controller/request/ArticleCreateRequest.java": {
+    "mtime": 1793190935.8316898,
+    "seen": 1793191093.492855,
+    "ast_hash": "68ee0bc7403b1ac251db79c0e10bbd39",
+    "semantic_hash": "68ee0bc7403b1ac251db79c0e10bbd39"
+  },
+  "service/article/src/main/java/microservice/board/article/controller/request/ArticleUpdateRequest.java": {
+    "mtime": 1793190935.8317845,
+    "seen": 1793191093.4928582,
+    "ast_hash": "7f74e9a7b23179d90588ef5dad399462",
+    "semantic_hash": "7f74e9a7b23179d90588ef5dad399462"
+  },
+  "service/article/src/main/java/microservice/board/article/controller/response/ArticlePageResponse.java": {
+    "mtime": 1793190935.8319254,
+    "seen": 1793191093.492859,
+    "ast_hash": "5f2cd4d378b3e6fef9833a3bc8d6c8c1",
+    "semantic_hash": "5f2cd4d378b3e6fef9833a3bc8d6c8c1"
+  },
+  "service/article/src/main/java/microservice/board/article/controller/response/ArticleResponse.java": {
+    "mtime": 1793190935.832021,
+    "seen": 1793191093.4928598,
+    "ast_hash": "afff4ec0ec8d27fcf4891e49cefc062f",
+    "semantic_hash": "afff4ec0ec8d27fcf4891e49cefc062f"
+  },
+  "service/article/src/main/java/microservice/board/article/entity/Article.java": {
+    "mtime": 1793190935.8322918,
+    "seen": 1793191093.4928598,
+    "ast_hash": "4cce6a2d0b09654ac657d3fd25d76e26",
+    "semantic_hash": "4cce6a2d0b09654ac657d3fd25d76e26"
+  },
+  "service/article/src/main/java/microservice/board/article/entity/BoardArticleCount.java": {
+    "mtime": 1793190935.8324876,
+    "seen": 1793191093.492861,
+    "ast_hash": "05d169524a53017bf2cc0eb345b8b962",
+    "semantic_hash": "05d169524a53017bf2cc0eb345b8b962"
+  },
+  "service/article/src/main/java/microservice/board/article/repository/ArticleRepository.java": {
+    "mtime": 1793190935.8327372,
+    "seen": 1793191093.492862,
+    "ast_hash": "b88761f6d31337e6870075faf4defd90",
+    "semantic_hash": "b88761f6d31337e6870075faf4defd90"
+  },
+  "service/article/src/main/java/microservice/board/article/repository/BoardArticleCountRepository.java": {
+    "mtime": 1793190935.8328376,
+    "seen": 1793191093.492863,
+    "ast_hash": "211196bc46c6122e97667d4bcc83f778",
+    "semantic_hash": "211196bc46c6122e97667d4bcc83f778"
+  },
+  "service/article/src/main/java/microservice/board/article/service/ArticleService.java": {
+    "mtime": 1793190935.8331192,
+    "seen": 1793191093.492864,
+    "ast_hash": "3811a5085e09a54e258dd28540d78a22",
+    "semantic_hash": "3811a5085e09a54e258dd28540d78a22"
+  },
+  "service/article/src/main/java/microservice/board/article/service/PageLimitCalculator.java": {
+    "mtime": 1793028374.3232737,
+    "seen": 1793191093.492865,
+    "ast_hash": "768ff50e7ecff6a02bd742ff5d5f832a",
+    "semantic_hash": "768ff50e7ecff6a02bd742ff5d5f832a"
+  },
+  "service/article/src/main/resources/application.yml": {
+    "mtime": 1793190935.8335145,
+    "seen": 1793191093.492866,
+    "ast_hash": "5ce3fcaa130be913cde30e695fefc150",
+    "semantic_hash": "5ce3fcaa130be913cde30e695fefc150"
+  },
+  "service/article/src/test/java/microservice/board/article/api/ArticleApiTest.java": {
+    "mtime": 1793190935.8347263,
+    "seen": 1793191093.492867,
+    "ast_hash": "15b5f163ba5dcd53cadbaa39a351905a",
+    "semantic_hash": "15b5f163ba5dcd53cadbaa39a351905a"
+  },
+  "service/article/src/test/java/microservice/board/article/data/DataInitializer.java": {
+    "mtime": 1793190935.8348992,
+    "seen": 1793191093.4928682,
+    "ast_hash": "6ac220b03b4fa99f72e338249128031e",
+    "semantic_hash": "6ac220b03b4fa99f72e338249128031e"
+  },
+  "service/article/src/test/java/microservice/board/article/repository/ArticleRepositoryTest.java": {
+    "mtime": 1793190935.835066,
+    "seen": 1793191093.4928691,
+    "ast_hash": "4b58230e5e052d44fd587503b069b912",
+    "semantic_hash": "4b58230e5e052d44fd587503b069b912"
+  },
+  "service/article/src/test/java/microservice/board/article/service/PageLimitCalculatorTest.java": {
+    "mtime": 1793190935.8352742,
+    "seen": 1793191093.4928691,
+    "ast_hash": "df768d37e63485e460570a4cd8d2870b",
+    "semantic_hash": "df768d37e63485e460570a4cd8d2870b"
+  },
+  "service/comment/build.gradle": {
+    "mtime": 1793190935.8355315,
+    "seen": 1793191093.4928699,
+    "ast_hash": "b7650187112e6165afbb1ea962481b32",
+    "semantic_hash": "b7650187112e6165afbb1ea962481b32"
+  },
+  "service/comment/src/main/java/microservice/board/comment/CommentApplication.java": {
+    "mtime": 1793190935.8357654,
+    "seen": 1793191093.4928708,
+    "ast_hash": "4a7f5c869b7f0ec4ae3ebb13bd5ce5cb",
+    "semantic_hash": "4a7f5c869b7f0ec4ae3ebb13bd5ce5cb"
+  },
+  "service/comment/src/main/java/microservice/board/comment/controller/CommentController.java": {
+    "mtime": 1793190935.8359098,
+    "seen": 1793191093.492872,
+    "ast_hash": "187aefab765d2b193656b93fb9078bb1",
+    "semantic_hash": "187aefab765d2b193656b93fb9078bb1"
+  },
+  "service/comment/src/main/java/microservice/board/comment/controller/CommentControllerV2.java": {
+    "mtime": 1793190935.8360062,
+    "seen": 1793191093.492873,
+    "ast_hash": "768b605f66c383cb90c17eb1b60f064a",
+    "semantic_hash": "768b605f66c383cb90c17eb1b60f064a"
+  },
+  "service/comment/src/main/java/microservice/board/comment/controller/request/CommentCreateRequest.java": {
+    "mtime": 1793190935.8361328,
+    "seen": 1793191093.492873,
+    "ast_hash": "3099ee3d2ae3de1e840b90784955fdf9",
+    "semantic_hash": "3099ee3d2ae3de1e840b90784955fdf9"
+  },
+  "service/comment/src/main/java/microservice/board/comment/controller/request/CommentCreateRequestV2.java": {
+    "mtime": 1793190935.8362188,
+    "seen": 1793191093.492874,
+    "ast_hash": "fcdc112f1f77684d95ab07ae1e2b189a",
+    "semantic_hash": "fcdc112f1f77684d95ab07ae1e2b189a"
+  },
+  "service/comment/src/main/java/microservice/board/comment/controller/response/CommentPageResponse.java": {
+    "mtime": 1793190935.8363664,
+    "seen": 1793191093.492875,
+    "ast_hash": "2ccf1197ba263fcc1b0f2983927641e5",
+    "semantic_hash": "2ccf1197ba263fcc1b0f2983927641e5"
+  },
+  "service/comment/src/main/java/microservice/board/comment/controller/response/CommentResponse.java": {
+    "mtime": 1793190935.8364573,
+    "seen": 1793191093.492875,
+    "ast_hash": "cdd3e48af433bd9020774de873b92fec",
+    "semantic_hash": "cdd3e48af433bd9020774de873b92fec"
+  },
+  "service/comment/src/main/java/microservice/board/comment/entity/ArticleCommentCount.java": {
+    "mtime": 1793190935.8365881,
+    "seen": 1793191093.492876,
+    "ast_hash": "b2bbf9c2c45023dcf46814ed9edd63d9",
+    "semantic_hash": "b2bbf9c2c45023dcf46814ed9edd63d9"
+  },
+  "service/comment/src/main/java/microservice/board/comment/entity/Comment.java": {
+    "mtime": 1793190935.83668,
+    "seen": 1793191093.492877,
+    "ast_hash": "6d5a30934629ed6325e8dc1ca9255938",
+    "semantic_hash": "6d5a30934629ed6325e8dc1ca9255938"
+  },
+  "service/comment/src/main/java/microservice/board/comment/entity/CommentPath.java": {
+    "mtime": 1793190935.8367736,
+    "seen": 1793191093.492877,
+    "ast_hash": "6a68c10aecc67df45e2b99b297e74824",
+    "semantic_hash": "6a68c10aecc67df45e2b99b297e74824"
+  },
+  "service/comment/src/main/java/microservice/board/comment/entity/CommentV2.java": {
+    "mtime": 1793190935.8368735,
+    "seen": 1793191093.4928782,
+    "ast_hash": "38a1acb86c4b9e01d982ab4e54a68d08",
+    "semantic_hash": "38a1acb86c4b9e01d982ab4e54a68d08"
+  },
+  "service/comment/src/main/java/microservice/board/comment/repository/ArticleCommentCountRepository.java": {
+    "mtime": 1793190935.8370044,
+    "seen": 1793191093.4928792,
+    "ast_hash": "91494d0faeefa57f1b13e1bf0dc00296",
+    "semantic_hash": "91494d0faeefa57f1b13e1bf0dc00296"
+  },
+  "service/comment/src/main/java/microservice/board/comment/repository/CommentRepository.java": {
+    "mtime": 1793190935.8370957,
+    "seen": 1793191093.4928799,
+    "ast_hash": "3b20963ce842b3ec27aace50497651e5",
+    "semantic_hash": "3b20963ce842b3ec27aace50497651e5"
+  },
+  "service/comment/src/main/java/microservice/board/comment/repository/CommentRepositoryV2.java": {
+    "mtime": 1793190935.8371835,
+    "seen": 1793191093.4928808,
+    "ast_hash": "e656a5db9a6b97da8002a15203106e55",
+    "semantic_hash": "e656a5db9a6b97da8002a15203106e55"
+  },
+  "service/comment/src/main/java/microservice/board/comment/service/CommentService.java": {
+    "mtime": 1793190935.8373291,
+    "seen": 1793191093.492882,
+    "ast_hash": "cf5f54aee88a020b8fba8c880c84944e",
+    "semantic_hash": "cf5f54aee88a020b8fba8c880c84944e"
+  },
+  "service/comment/src/main/java/microservice/board/comment/service/CommentServiceV2.java": {
+    "mtime": 1793190935.8375218,
+    "seen": 1793191093.492882,
+    "ast_hash": "dcd762e9b92894bf19ff7f48fe97e660",
+    "semantic_hash": "dcd762e9b92894bf19ff7f48fe97e660"
+  },
+  "service/comment/src/main/java/microservice/board/comment/service/PageLimitCalculator.java": {
+    "mtime": 1793190935.83764,
+    "seen": 1793191093.492883,
+    "ast_hash": "9f813257617adb9095cd1bf5cded6dfe",
+    "semantic_hash": "9f813257617adb9095cd1bf5cded6dfe"
+  },
+  "service/comment/src/main/resources/application.yml": {
+    "mtime": 1793190935.837807,
+    "seen": 1793191093.492884,
+    "ast_hash": "60c1a3fbd13be7b99382eeb8c09fcf3d",
+    "semantic_hash": "60c1a3fbd13be7b99382eeb8c09fcf3d"
+  },
+  "service/comment/src/test/java/microservice/board/comment/api/CommentApiTest.java": {
+    "mtime": 1793190935.8382654,
+    "seen": 1793191093.4928849,
+    "ast_hash": "c12182e6845dbccd0ae483a914a181fe",
+    "semantic_hash": "c12182e6845dbccd0ae483a914a181fe"
+  },
+  "service/comment/src/test/java/microservice/board/comment/api/CommentApiV2Test.java": {
+    "mtime": 1793190935.8384676,
+    "seen": 1793191093.4928849,
+    "ast_hash": "9f6fc81e744175ee88df3a6327223611",
+    "semantic_hash": "9f6fc81e744175ee88df3a6327223611"
+  },
+  "service/comment/src/test/java/microservice/board/comment/data/DataInitializer.java": {
+    "mtime": 1793190935.838616,
+    "seen": 1793191093.492886,
+    "ast_hash": "bac0a274f37de225db678f8eab657a6d",
+    "semantic_hash": "bac0a274f37de225db678f8eab657a6d"
+  },
+  "service/comment/src/test/java/microservice/board/comment/data/DataInitializerV2.java": {
+    "mtime": 1793190935.8387005,
+    "seen": 1793191093.492887,
+    "ast_hash": "cb1373539734d34a1dd71e50fc53b489",
+    "semantic_hash": "cb1373539734d34a1dd71e50fc53b489"
+  },
+  "service/comment/src/test/java/microservice/board/comment/entity/CommentPathTest.java": {
+    "mtime": 1793190935.8388343,
+    "seen": 1793191093.492887,
+    "ast_hash": "6e51b4b17a25019dca4d32d319b6ec60",
+    "semantic_hash": "6e51b4b17a25019dca4d32d319b6ec60"
+  },
+  "service/comment/src/test/java/microservice/board/comment/service/CommentServiceTest.java": {
+    "mtime": 1793190935.8390632,
+    "seen": 1793191093.492888,
+    "ast_hash": "cb8f740c344459f2f1e90af65ad625b3",
+    "semantic_hash": "cb8f740c344459f2f1e90af65ad625b3"
+  },
+  "service/hot-article/build.gradle": {
+    "mtime": 1793190935.8393953,
+    "seen": 1793191093.4928892,
+    "ast_hash": "36646ee3fd336b02502cceacf2c783fc",
+    "semantic_hash": "36646ee3fd336b02502cceacf2c783fc"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/HotArticleApplication.java": {
+    "mtime": 1782652332.3745356,
+    "seen": 1793191093.4928892,
+    "ast_hash": "75461c3a0e83ce08dba89996c333d349",
+    "semantic_hash": "75461c3a0e83ce08dba89996c333d349"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/client/ArticleClient.java": {
+    "mtime": 1793190935.8395717,
+    "seen": 1793191093.4928901,
+    "ast_hash": "7aa1ffbc6e2e1e8efd01a0c7d5e1531e",
+    "semantic_hash": "7aa1ffbc6e2e1e8efd01a0c7d5e1531e"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/config/KafkaConfig.java": {
+    "mtime": 1793190935.8397043,
+    "seen": 1793191093.4928908,
+    "ast_hash": "b61ef3c75cdc797095929d71759d0414",
+    "semantic_hash": "b61ef3c75cdc797095929d71759d0414"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/consumer/HotArticleEventConsumer.java": {
+    "mtime": 1793190935.8398252,
+    "seen": 1793191093.4928918,
+    "ast_hash": "4467c6410ee5bf9aa1895741622edf58",
+    "semantic_hash": "4467c6410ee5bf9aa1895741622edf58"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/controller/HotArticleController.java": {
+    "mtime": 1793190935.8399541,
+    "seen": 1793191093.492893,
+    "ast_hash": "b693a8bd6bf2f59f7de054fc50019765",
+    "semantic_hash": "b693a8bd6bf2f59f7de054fc50019765"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/repository/ArticleCommentCountRepository.java": {
+    "mtime": 1793190935.8400989,
+    "seen": 1793191093.492893,
+    "ast_hash": "02272f5edb2bac9e5e065637c464c665",
+    "semantic_hash": "02272f5edb2bac9e5e065637c464c665"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/repository/ArticleCreatedTimeRepository.java": {
+    "mtime": 1793190935.8405306,
+    "seen": 1793191093.492894,
+    "ast_hash": "1ec2ef9069a978c62917cfb12ab949a3",
+    "semantic_hash": "1ec2ef9069a978c62917cfb12ab949a3"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/repository/ArticleLikeCountRepository.java": {
+    "mtime": 1793190935.840624,
+    "seen": 1793191093.492895,
+    "ast_hash": "71f8817d26c5de44ecd92cdc38c59fd5",
+    "semantic_hash": "71f8817d26c5de44ecd92cdc38c59fd5"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/repository/ArticleViewCountRepository.java": {
+    "mtime": 1793190935.84071,
+    "seen": 1793191093.492895,
+    "ast_hash": "79a005c7853ab4a861c5cf0b421a7aa7",
+    "semantic_hash": "79a005c7853ab4a861c5cf0b421a7aa7"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/repository/HotArticleListRepository.java": {
+    "mtime": 1793190935.8407998,
+    "seen": 1793191093.492896,
+    "ast_hash": "91bf51a4bc0a3ac68bbd41efea21ec98",
+    "semantic_hash": "91bf51a4bc0a3ac68bbd41efea21ec98"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/HotArticleScoreCalculator.java": {
+    "mtime": 1793190935.8416288,
+    "seen": 1793191093.492897,
+    "ast_hash": "60a11176e099472b840f4bb034a5a8b1",
+    "semantic_hash": "60a11176e099472b840f4bb034a5a8b1"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/HotArticleScoreUpdater.java": {
+    "mtime": 1793190935.841722,
+    "seen": 1793191093.492897,
+    "ast_hash": "1e3b36c6e25202a0619e2873f1e83f7a",
+    "semantic_hash": "1e3b36c6e25202a0619e2873f1e83f7a"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/HotArticleService.java": {
+    "mtime": 1793190935.8418605,
+    "seen": 1793191093.492898,
+    "ast_hash": "79e2047dd4530377423329a0d69aee58",
+    "semantic_hash": "79e2047dd4530377423329a0d69aee58"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/ArticleCreatedEventHandler.java": {
+    "mtime": 1793190935.841996,
+    "seen": 1793191093.4928992,
+    "ast_hash": "5b04f3f6685fe8f7e5ca1d9457a6d97c",
+    "semantic_hash": "5b04f3f6685fe8f7e5ca1d9457a6d97c"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/ArticleDeletedEventHandler.java": {
+    "mtime": 1793190935.8420727,
+    "seen": 1793191093.4928992,
+    "ast_hash": "3d8cb4b66d59128fa41e95d869a6173d",
+    "semantic_hash": "3d8cb4b66d59128fa41e95d869a6173d"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/ArticleLikedEventHandler.java": {
+    "mtime": 1793190935.8421552,
+    "seen": 1793191093.4929001,
+    "ast_hash": "e793172996ad179b521d8721e4339c99",
+    "semantic_hash": "e793172996ad179b521d8721e4339c99"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/ArticleUnlikedEventHandler.java": {
+    "mtime": 1793190935.842244,
+    "seen": 1793191093.492901,
+    "ast_hash": "70d7ef70b4ef203f39263d4d8a793a12",
+    "semantic_hash": "70d7ef70b4ef203f39263d4d8a793a12"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/ArticleViewedEventHandler.java": {
+    "mtime": 1793190935.842342,
+    "seen": 1793191093.4929018,
+    "ast_hash": "8b757702c74b9019d4c9e4a841af43c2",
+    "semantic_hash": "8b757702c74b9019d4c9e4a841af43c2"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/CommentCreatedEventHandler.java": {
+    "mtime": 1793190935.8431756,
+    "seen": 1793191093.4929018,
+    "ast_hash": "1a681fbd9b34fcd6125e083fe99d954c",
+    "semantic_hash": "1a681fbd9b34fcd6125e083fe99d954c"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/CommentDeletedEventHandler.java": {
+    "mtime": 1793190935.8434067,
+    "seen": 1793191093.492903,
+    "ast_hash": "01e7eb81fc0984bdfcb5953280f7cdd7",
+    "semantic_hash": "01e7eb81fc0984bdfcb5953280f7cdd7"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/eventhandler/EventHandler.java": {
+    "mtime": 1793190935.8435009,
+    "seen": 1793191093.492903,
+    "ast_hash": "07e1283056b502d89953c15f1054eb8b",
+    "semantic_hash": "07e1283056b502d89953c15f1054eb8b"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/service/response/HotArticleResponse.java": {
+    "mtime": 1793190935.8436427,
+    "seen": 1793191093.492904,
+    "ast_hash": "e9afc7a1a66c4bacaafcb8c9efd9ff71",
+    "semantic_hash": "e9afc7a1a66c4bacaafcb8c9efd9ff71"
+  },
+  "service/hot-article/src/main/java/microservice/board/hotarticle/utils/TimeCalculatorUtils.java": {
+    "mtime": 1793190935.8437815,
+    "seen": 1793191093.492905,
+    "ast_hash": "7627eede968f3a35a88df70c55206d5d",
+    "semantic_hash": "7627eede968f3a35a88df70c55206d5d"
+  },
+  "service/hot-article/src/main/resources/application.yml": {
+    "mtime": 1793190935.8440647,
+    "seen": 1793191093.492905,
+    "ast_hash": "c0adf6580ca3111a4d13909a2e58bf98",
+    "semantic_hash": "c0adf6580ca3111a4d13909a2e58bf98"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/api/HotArticleApiTest.java": {
+    "mtime": 1793190935.8447332,
+    "seen": 1793191093.492906,
+    "ast_hash": "b6c1c44e0e9ca87e36d9834ae4390207",
+    "semantic_hash": "b6c1c44e0e9ca87e36d9834ae4390207"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/data/DataInitializer.java": {
+    "mtime": 1793190935.844907,
+    "seen": 1793191093.492907,
+    "ast_hash": "7d91c5b0ffd93c7f4f38a5ec0266e6f6",
+    "semantic_hash": "7d91c5b0ffd93c7f4f38a5ec0266e6f6"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/repository/HotArticleListRepositoryTest.java": {
+    "mtime": 1793190935.8450754,
+    "seen": 1793191093.492907,
+    "ast_hash": "48a67c09210e83d226befb1bf02985a1",
+    "semantic_hash": "48a67c09210e83d226befb1bf02985a1"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/service/HotArticleScoreCalculatorTest.java": {
+    "mtime": 1793190935.8452196,
+    "seen": 1793191093.492908,
+    "ast_hash": "d50d0c055b64bd1988f6b6734354b077",
+    "semantic_hash": "d50d0c055b64bd1988f6b6734354b077"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/service/HotArticleScoreUpdaterTest.java": {
+    "mtime": 1793190935.8453858,
+    "seen": 1793191093.492909,
+    "ast_hash": "df828ea2b7a7f51614849312cb11088b",
+    "semantic_hash": "df828ea2b7a7f51614849312cb11088b"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/service/HotArticleServiceTest.java": {
+    "mtime": 1793190935.8455064,
+    "seen": 1793191093.492909,
+    "ast_hash": "3ee9c00ff81bbb72362177d34ecf0071",
+    "semantic_hash": "3ee9c00ff81bbb72362177d34ecf0071"
+  },
+  "service/hot-article/src/test/java/microservice/board/hotarticle/utils/TimeCalculatorUtilsTest.java": {
+    "mtime": 1793190935.8456852,
+    "seen": 1793191093.4929101,
+    "ast_hash": "317bf12981aeb3f0fc156a871356728e",
+    "semantic_hash": "317bf12981aeb3f0fc156a871356728e"
+  },
+  "service/like/build.gradle": {
+    "mtime": 1793190935.845883,
+    "seen": 1793191093.492911,
+    "ast_hash": "4ccb5614240ba3b75e512ee7ddd61e25",
+    "semantic_hash": "4ccb5614240ba3b75e512ee7ddd61e25"
+  },
+  "service/like/src/main/java/microservice/board/like/LikeApplication.java": {
+    "mtime": 1793190935.8463225,
+    "seen": 1793191093.492911,
+    "ast_hash": "bfbf338e6091963d28fe2b342ffd21cc",
+    "semantic_hash": "bfbf338e6091963d28fe2b342ffd21cc"
+  },
+  "service/like/src/main/java/microservice/board/like/controller/ArticleLikeController.java": {
+    "mtime": 1793190935.8464668,
+    "seen": 1793191093.492912,
+    "ast_hash": "6ae09a404750abd23c6bbda4b092c37e",
+    "semantic_hash": "6ae09a404750abd23c6bbda4b092c37e"
+  },
+  "service/like/src/main/java/microservice/board/like/controller/response/ArticleLikeResponse.java": {
+    "mtime": 1793190935.846677,
+    "seen": 1793191093.492913,
+    "ast_hash": "71f30fe78e12987b23ee041e29f8f049",
+    "semantic_hash": "71f30fe78e12987b23ee041e29f8f049"
+  },
+  "service/like/src/main/java/microservice/board/like/entity/ArticleLike.java": {
+    "mtime": 1793190935.8468382,
+    "seen": 1793191093.492913,
+    "ast_hash": "449282e9e867339e33fd8a00d7baa365",
+    "semantic_hash": "449282e9e867339e33fd8a00d7baa365"
+  },
+  "service/like/src/main/java/microservice/board/like/entity/ArticleLikeCount.java": {
+    "mtime": 1793190935.846937,
+    "seen": 1793191093.492914,
+    "ast_hash": "658630561e798b9eda0480171e70f465",
+    "semantic_hash": "658630561e798b9eda0480171e70f465"
+  },
+  "service/like/src/main/java/microservice/board/like/repository/ArticleLikeCountRepository.java": {
+    "mtime": 1793190935.8470604,
+    "seen": 1793191093.492915,
+    "ast_hash": "09e8308ae5e4184070fb067d7d8147fb",
+    "semantic_hash": "09e8308ae5e4184070fb067d7d8147fb"
+  },
+  "service/like/src/main/java/microservice/board/like/repository/ArticleLikeRepository.java": {
+    "mtime": 1793190935.8471498,
+    "seen": 1793191093.4929159,
+    "ast_hash": "d8dd47efef59b9f674e9e5fd7eff441b",
+    "semantic_hash": "d8dd47efef59b9f674e9e5fd7eff441b"
+  },
+  "service/like/src/main/java/microservice/board/like/service/ArticleLikeService.java": {
+    "mtime": 1793190935.8473718,
+    "seen": 1793191093.492917,
+    "ast_hash": "865fcb8cb3089d7da04b1bb312c03138",
+    "semantic_hash": "865fcb8cb3089d7da04b1bb312c03138"
+  },
+  "service/like/src/main/resources/application.yml": {
+    "mtime": 1793190935.8477383,
+    "seen": 1793191093.492917,
+    "ast_hash": "a52f53801e76d8a4fef5efa4bb297810",
+    "semantic_hash": "a52f53801e76d8a4fef5efa4bb297810"
+  },
+  "service/like/src/test/java/microservice/board/like/api/LikeApiTest.java": {
+    "mtime": 1793190935.8482015,
+    "seen": 1793191093.492918,
+    "ast_hash": "0ceed2e0b018d425d33e8cf0eab53f04",
+    "semantic_hash": "0ceed2e0b018d425d33e8cf0eab53f04"
+  },
+  "service/view/build.gradle": {
+    "mtime": 1793190935.8483758,
+    "seen": 1793191093.492919,
+    "ast_hash": "5d53b902cb78894d75678e5cafd336a2",
+    "semantic_hash": "5d53b902cb78894d75678e5cafd336a2"
+  },
+  "service/view/src/main/java/microservice/board/view/ViewApplication.java": {
+    "mtime": 1793190935.8485847,
+    "seen": 1793191093.492919,
+    "ast_hash": "094950e8180ef2debc374fcb52460c61",
+    "semantic_hash": "094950e8180ef2debc374fcb52460c61"
+  },
+  "service/view/src/main/java/microservice/board/view/controller/ArticleViewController.java": {
+    "mtime": 1793190935.8487267,
+    "seen": 1793191093.492921,
+    "ast_hash": "4d11a3b3e233ebcc091d8c9b7c81e83a",
+    "semantic_hash": "4d11a3b3e233ebcc091d8c9b7c81e83a"
+  },
+  "service/view/src/main/java/microservice/board/view/entity/ArticleViewCount.java": {
+    "mtime": 1793190935.8488684,
+    "seen": 1793191093.492921,
+    "ast_hash": "235a73b3c261715a31d866ec7cfe6098",
+    "semantic_hash": "235a73b3c261715a31d866ec7cfe6098"
+  },
+  "service/view/src/main/java/microservice/board/view/repository/ArticleViewCountBackUpRepository.java": {
+    "mtime": 1793190935.849029,
+    "seen": 1793191093.492922,
+    "ast_hash": "2c2a1f938f667fd6100ad9de3d6bd7b9",
+    "semantic_hash": "2c2a1f938f667fd6100ad9de3d6bd7b9"
+  },
+  "service/view/src/main/java/microservice/board/view/repository/ArticleViewCountRepository.java": {
+    "mtime": 1793190935.849206,
+    "seen": 1793191093.4929228,
+    "ast_hash": "bf172cee3541d3b08802b387237da469",
+    "semantic_hash": "bf172cee3541d3b08802b387237da469"
+  },
+  "service/view/src/main/java/microservice/board/view/repository/ArticleViewDistributedLockRepository.java": {
+    "mtime": 1793190935.849298,
+    "seen": 1793191093.4929228,
+    "ast_hash": "1ad48006ebb0842a0de5f64ca6769bbd",
+    "semantic_hash": "1ad48006ebb0842a0de5f64ca6769bbd"
+  },
+  "service/view/src/main/java/microservice/board/view/service/ArticleViewCountBackUpProcessor.java": {
+    "mtime": 1793190935.8494303,
+    "seen": 1793191093.492924,
+    "ast_hash": "69ab7b778343306bab4ccf90a46e2c40",
+    "semantic_hash": "69ab7b778343306bab4ccf90a46e2c40"
+  },
+  "service/view/src/main/java/microservice/board/view/service/ArticleViewService.java": {
+    "mtime": 1793190935.8495092,
+    "seen": 1793191093.492925,
+    "ast_hash": "c25e2199976500bdb2d9571622bb28d3",
+    "semantic_hash": "c25e2199976500bdb2d9571622bb28d3"
+  },
+  "service/view/src/main/resources/application.yml": {
+    "mtime": 1793190935.8496335,
+    "seen": 1793191093.492926,
+    "ast_hash": "6cde4b495e75ca021bddf662a278502c",
+    "semantic_hash": "6cde4b495e75ca021bddf662a278502c"
+  },
+  "service/view/src/test/java/microservice/board/view/api/ViewApiTest.java": {
+    "mtime": 1793190935.849951,
+    "seen": 1793191093.492926,
+    "ast_hash": "e69d512814c514f7af14645ea2e6f7ce",
+    "semantic_hash": "e69d512814c514f7af14645ea2e6f7ce"
+  },
+  "service/view/src/test/java/microservice/board/view/repository/ArticleViewCountBackUpRepositoryTest.java": {
+    "mtime": 1793190935.85008,
+    "seen": 1793191093.492927,
+    "ast_hash": "74ab458652781c3f2811438a087b11ee",
+    "semantic_hash": "74ab458652781c3f2811438a087b11ee"
+  },
+  "settings.gradle": {
+    "mtime": 1793190935.8506174,
+    "seen": 1793191093.492928,
+    "ast_hash": "7763c1f108c81d7743ff251924408227",
+    "semantic_hash": "7763c1f108c81d7743ff251924408227"
+  }
+}
