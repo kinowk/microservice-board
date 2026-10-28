@@ -29,4 +29,20 @@ class ArticleRepositoryTest {
         long count = articleRepository.count(1L, 100000L);
         log.info("count: {}", count);
     }
+
+    @Test
+    void findAllInfiniteScroll() {
+        List<Article> articles1 = articleRepository.readAllInfiniteScroll(1L, 20L);
+        System.out.println("articles1.size() = " + articles1.size());
+        for (Article article : articles1) {
+            System.out.println("article = " + article);
+        }
+
+        Long lastArticleId = articles1.getLast().getArticleId();
+        List<Article> articles2 = articleRepository.readAllInfiniteScroll(1L, 20L, lastArticleId);
+        System.out.println("articles2.size() = " + articles2.size());
+        for (Article article : articles2) {
+            System.out.println("article = " + article);
+        }
+    }
 }

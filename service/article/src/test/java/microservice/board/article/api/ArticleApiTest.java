@@ -93,6 +93,23 @@ class ArticleApiTest {
                 .body(ArticleResponse.Page.class);
     }
 
+    @Test
+    void readAllArticlesInfiniteScroll() {
+        ArticleResponse.Cursor response1 = restClient.get()
+                .uri("/v1/articles/infinite-scroll?boardId=1&pageSize=20")
+                .retrieve()
+                .body(ArticleResponse.Cursor.class);
+
+        System.out.println("response1 = " + response1);
+
+        Long lastArticleId = response1.articles().getLast().articleId();
+        ArticleResponse.Cursor response2 = restClient.get()
+                .uri("/v1/articles/infinite-scroll?boardId=1&pageSize=20&lastArticleId=" + lastArticleId)
+                .retrieve()
+                .body(ArticleResponse.Cursor.class);
+        System.out.println("response2 = " + response2);
+    }
+
     static class ArticleRequest {
 
         record Create(String title, String content, Long boardId, Long writerId) {
