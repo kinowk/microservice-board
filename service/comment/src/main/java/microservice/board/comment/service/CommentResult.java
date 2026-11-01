@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import microservice.board.comment.entity.Comment;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CommentResult {
@@ -48,6 +49,32 @@ public class CommentResult {
                     comment.getWriterId(),
                     comment.getDeleted(),
                     comment.getCreatedAt()
+            );
+        }
+    }
+
+    public record Page(
+            List<Read> comments,
+            long commentCount
+    ) {
+        public static Page of(List<Comment> comments, long count) {
+            return new Page(
+                    comments.stream()
+                            .map(Read::from)
+                            .toList(),
+                    count
+            );
+        }
+    }
+
+    public record Cursor(
+            List<Read> comments
+    ) {
+        public static Cursor of(List<Comment> comments) {
+            return new Cursor(
+                    comments.stream()
+                            .map(Read::from)
+                            .toList()
             );
         }
     }

@@ -7,6 +7,8 @@ import microservice.board.common.snowflake.Snowflake;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import static java.util.function.Predicate.not;
 
 @Service
@@ -74,5 +76,31 @@ public class CommentService {
                     .filter(not(this::hasChildren))
                     .ifPresent(this::delete);
         }
+    }
+
+    public CommentResult.Page readAll(CommentCommand.Page command) {
+        return CommentResult.Page.of(
+                commentRepository.findAll(
+                        command.articleId(),
+                        (command.page() - 1) * command.pageSize(),
+                        command.pageSize()
+                ),
+                commentRepository.count(
+                        command.articleId(),
+                        PageLimitCalculator.calculatePageLimit(command.page(), command.pageSize(), 10L)
+                )
+        );
+    }
+
+    public CommentResult.Cursor readAllInfiniteScroll(CommentCommand.Cursor command) {
+        List<Comment> comments = command.lastParentCommentId() == null || command.lastCommentId() == null ?
+                commentRepository.findAllInfiniteScroll(command.articleId(), command.pageSize()) :
+                commentRepository.findAllInfiniteScroll(
+                        command.articleId(),
+                        command.lastParentCommentId(),
+                        command.lastCommentId(),
+                        command.pageSize()
+                );
+        return CommentResult.Cursor.of(comments);
     }
 }

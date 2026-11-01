@@ -12,4 +12,30 @@ public class CommentCommand {
             Long writerId
     ) {
     }
+
+    public record Page(
+            Long articleId,
+            Long page,
+            Long pageSize
+    ) {
+        public static Page of(Long articleId, Long page, Long pageSize) {
+            return new Page(articleId, page, pageSize);
+        }
+    }
+
+    public record Cursor(
+            Long articleId,
+            Long pageSize,
+            Long lastParentCommentId,
+            Long lastCommentId
+    ) {
+        public static Cursor of(Long articleId, Long pageSize, Long lastParentCommentId, Long lastCommentId) {
+            return new Cursor(
+                    articleId,
+                    pageSize,
+                    lastParentCommentId,
+                    lastCommentId
+            );
+        }
+    }
 }
