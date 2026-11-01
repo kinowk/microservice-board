@@ -27,7 +27,7 @@ public class Article {
     private String content;
 
     @Column(name = "board_id", nullable = false, updatable = false)
-    private Long boardId;
+    private Long boardId; // shard key
 
     @Column(name = "writer_id", nullable = false, updatable = false)
     private Long writerId;

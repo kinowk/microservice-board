@@ -24,7 +24,7 @@ public class Comment {
     private String content;
 
     @Column(name = "article_id", nullable = false, updatable = false)
-    private Long articleId;
+    private Long articleId; // shard key
 
     @Column(name = "parent_comment_id", nullable = false, updatable = false)
     private Long parentCommentId;
