@@ -20,7 +20,7 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
                     ") t",
             nativeQuery = true
     )
-    Long countBy(
+    long countBy(
             @Param("articleId") Long articleId,
             @Param("parentCommentId") Long parentCommentId,
             @Param("limit") Long limit
