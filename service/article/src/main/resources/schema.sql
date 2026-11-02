@@ -47,3 +47,9 @@ where board_id = {board_Id}
 and article_id < {last_article_id}
 order by article_id desc
 limit {limit};
+
+/* 게시글 수 table */
+create table board_article_count (
+    board_id bigint not null primary key,
+    article_count bigint not null
+);
