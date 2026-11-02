@@ -13,7 +13,7 @@ public class ArticleLikeCount {
 
     @Id
     @Column(name = "article_id", nullable = false, updatable = false)
-    private Long articleId;
+    private Long articleId; // shard key
 
     @Column(name = "like_count", nullable = false)
     private Long likeCount;
