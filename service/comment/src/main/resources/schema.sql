@@ -109,3 +109,9 @@ where article_id = {article_id}
 and path > {last_path}
 order by path asc
 limit {limit};
+
+/* 댓글 수 table */
+create table article_comment_count (
+    article_id bigint not null primary key,
+    comment_count bigint not null
+);
