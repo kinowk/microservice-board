@@ -1,7 +1,9 @@
 package microservice.board.comment.service;
 
 import lombok.RequiredArgsConstructor;
+import microservice.board.comment.entity.ArticleCommentCount;
 import microservice.board.comment.entity.Comment;
+import microservice.board.comment.repository.ArticleCommentCountRepository;
 import microservice.board.comment.repository.CommentRepository;
 import microservice.board.common.snowflake.Snowflake;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ public class CommentService {
 
     private final Snowflake snowflake = new Snowflake();
     private final CommentRepository commentRepository;
+    private final ArticleCommentCountRepository articleCommentCountRepository;
 
     public CommentResult.Read read(Long commentId) {
         Comment comment = commentRepository.findById(commentId).orElseThrow();
@@ -36,6 +39,13 @@ public class CommentService {
                         command.writerId()
                 )
         );
+
+        int result = articleCommentCountRepository.increase(comment.getArticleId());
+        if (result == 0) {
+            articleCommentCountRepository.save(
+                    ArticleCommentCount.of(comment.getArticleId(), 1L)
+            );
+        }
         return CommentResult.Create.from(comment);
     }
 
@@ -69,6 +79,7 @@ public class CommentService {
 
     private void delete(Comment comment) {
         commentRepository.delete(comment);
+        articleCommentCountRepository.decrease(comment.getArticleId());
 
         if (!comment.isRoot()) {
             commentRepository.findById(comment.getParentCommentId())
@@ -102,5 +113,11 @@ public class CommentService {
                         command.pageSize()
                 );
         return CommentResult.Cursor.of(comments);
+    }
+
+    public Long count(Long articleId) {
+        return articleCommentCountRepository.findById(articleId)
+                .map(ArticleCommentCount::getCommentCount)
+                .orElseThrow();
     }
 }

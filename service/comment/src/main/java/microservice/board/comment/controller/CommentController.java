@@ -53,4 +53,9 @@ public class CommentController {
     public void delete(@PathVariable("commentId") Long commentId) {
         commentService.delete(commentId);
     }
+
+    @GetMapping("/v1/comments/articles/{articleId}/count")
+    public Long count(@RequestParam("articleId") Long articleId) {
+        return commentService.count(articleId);
+    }
 }
