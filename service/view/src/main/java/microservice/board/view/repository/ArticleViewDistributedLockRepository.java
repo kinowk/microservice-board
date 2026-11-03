@@ -16,10 +16,12 @@ public class ArticleViewDistributedLockRepository {
     private final StringRedisTemplate redisTemplate;
 
     public boolean lock(Long articleId, Long userId, Duration ttl) {
-        return redisTemplate.opsForValue().setIfAbsent(
-                generateKey(articleId, userId),
-                "",
-                ttl
+        return Boolean.TRUE.equals(
+                redisTemplate.opsForValue().setIfAbsent(
+                        generateKey(articleId, userId),
+                        "",
+                        ttl
+                )
         );
     }
 
