@@ -27,7 +27,7 @@ public class Event<T extends EventPayload> {
 
         Long eventId = eventRaw.getEventId();
         EventType type = EventType.from(eventRaw.getType());
-        EventPayload payload = DataSerializer.deserialize(eventRaw.getPayload(), type.getPayloadClass());
+        EventPayload payload = DataSerializer.deserialize(eventRaw.getPayload(), type != null ? type.getPayloadClass() : null);
         return of(eventId, type, payload);
     }
 
