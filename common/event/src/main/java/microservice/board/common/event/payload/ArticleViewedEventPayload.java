@@ -11,4 +11,7 @@ import microservice.board.common.event.EventPayload;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ArticleViewedEventPayload implements EventPayload {
+
+    private Long articleId;
+    private Long articleViewCount;
 }
