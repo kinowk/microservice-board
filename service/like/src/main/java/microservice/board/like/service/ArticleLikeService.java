@@ -1,6 +1,10 @@
 package microservice.board.like.service;
 
 import lombok.RequiredArgsConstructor;
+import microservice.board.common.event.EventType;
+import microservice.board.common.event.payload.ArticleLikedEventPayload;
+import microservice.board.common.event.payload.ArticleUnlikedEventPayload;
+import microservice.board.common.outboxmessagerelay.OutboxEventPublisher;
 import microservice.board.common.snowflake.Snowflake;
 import microservice.board.like.entity.ArticleLike;
 import microservice.board.like.entity.ArticleLikeCount;
@@ -17,6 +21,7 @@ public class ArticleLikeService {
     private final Snowflake snowflake = new Snowflake();
     private final ArticleLikeRepository articleLikeRepository;
     private final ArticleLikeCountRepository articleLikeCountRepository;
+    private final OutboxEventPublisher outboxEventPublisher;
 
     public ArticleLikeResult.Read read(ArticleLikeCommand.Read command) {
         return articleLikeRepository.findByArticleIdAndUserId(command.articleId(), command.userId())
@@ -37,7 +42,7 @@ public class ArticleLikeService {
      */
     @Transactional
     public void likePessimisticLock1(ArticleLikeCommand.Like command) {
-        articleLikeRepository.save(
+        ArticleLike articleLike = articleLikeRepository.save(
                 ArticleLike.of(
                         snowflake.nextId(),
                         command.articleId(),
@@ -51,6 +56,18 @@ public class ArticleLikeService {
                     ArticleLikeCount.of(command.articleId(), 1L)
             );
         }
+
+        outboxEventPublisher.publish(
+                EventType.ARTICLE_LIKED,
+                ArticleLikedEventPayload.builder()
+                        .articleLikeId(articleLike.getArticleLikeId())
+                        .articleId(articleLike.getArticleLikeId())
+                        .userId(articleLike.getUserId())
+                        .createdAt(articleLike.getCreatedAt())
+                        .articleLikeCount(count(articleLike.getArticleId()))
+                        .build(),
+                articleLike.getArticleId()
+        );
     }
 
     /**
@@ -64,6 +81,17 @@ public class ArticleLikeService {
                 .ifPresent(articleLike -> {
                     articleLikeRepository.delete(articleLike);
                     articleLikeCountRepository.decrease(command.articleId());
+                    outboxEventPublisher.publish(
+                            EventType.ARTICLE_UNLIKED,
+                            ArticleUnlikedEventPayload.builder()
+                                    .articleLikeId(articleLike.getArticleLikeId())
+                                    .articleId(articleLike.getArticleId())
+                                    .userId(articleLike.getUserId())
+                                    .createdAt(articleLike.getCreatedAt())
+                                    .articleLikeCount(count(articleLike.getArticleId()))
+                                    .build(),
+                            articleLike.getArticleId()
+                    );
                 });
     }
 
@@ -74,7 +102,7 @@ public class ArticleLikeService {
      */
     @Transactional
     public void likePessimisticLock2(ArticleLikeCommand.Like command) {
-        articleLikeRepository.save(
+        ArticleLike articleLike = articleLikeRepository.save(
                 ArticleLike.of(
                         snowflake.nextId(),
                         command.articleId(),
@@ -86,6 +114,18 @@ public class ArticleLikeService {
                 .orElseGet(() -> ArticleLikeCount.of(command.articleId(), 0L));
         articleLikeCount.increase();
         articleLikeCountRepository.save(articleLikeCount);
+
+        outboxEventPublisher.publish(
+                EventType.ARTICLE_LIKED,
+                ArticleLikedEventPayload.builder()
+                        .articleLikeId(articleLike.getArticleLikeId())
+                        .articleId(articleLike.getArticleLikeId())
+                        .userId(articleLike.getUserId())
+                        .createdAt(articleLike.getCreatedAt())
+                        .articleLikeCount(count(articleLike.getArticleId()))
+                        .build(),
+                articleLike.getArticleId()
+        );
     }
 
     /**
@@ -100,12 +140,23 @@ public class ArticleLikeService {
                     articleLikeRepository.delete(articleLike);
                     ArticleLikeCount articleLikeCount = articleLikeCountRepository.findLockedByArticleId(command.articleId()).orElseThrow();
                     articleLikeCount.decrease();
+                    outboxEventPublisher.publish(
+                            EventType.ARTICLE_UNLIKED,
+                            ArticleUnlikedEventPayload.builder()
+                                    .articleLikeId(articleLike.getArticleLikeId())
+                                    .articleId(articleLike.getArticleId())
+                                    .userId(articleLike.getUserId())
+                                    .createdAt(articleLike.getCreatedAt())
+                                    .articleLikeCount(count(articleLike.getArticleId()))
+                                    .build(),
+                            articleLike.getArticleId()
+                    );
                 });
     }
 
     @Transactional
     public void likeOptimisticLock(ArticleLikeCommand.Like command) {
-        articleLikeRepository.save(
+        ArticleLike articleLike = articleLikeRepository.save(
                 ArticleLike.of(
                         snowflake.nextId(),
                         command.articleId(),
@@ -117,6 +168,18 @@ public class ArticleLikeService {
                 .orElseGet(() -> ArticleLikeCount.of(command.articleId(), 0L));
         articleLikeCount.increase();
         articleLikeCountRepository.save(articleLikeCount);
+
+        outboxEventPublisher.publish(
+                EventType.ARTICLE_LIKED,
+                ArticleLikedEventPayload.builder()
+                        .articleLikeId(articleLike.getArticleLikeId())
+                        .articleId(articleLike.getArticleLikeId())
+                        .userId(articleLike.getUserId())
+                        .createdAt(articleLike.getCreatedAt())
+                        .articleLikeCount(count(articleLike.getArticleId()))
+                        .build(),
+                articleLike.getArticleId()
+        );
     }
 
     @Transactional
@@ -126,6 +189,17 @@ public class ArticleLikeService {
                     articleLikeRepository.delete(articleLike);
                     ArticleLikeCount articleLikeCount = articleLikeCountRepository.findById(command.articleId()).orElseThrow();
                     articleLikeCount.decrease();
+                    outboxEventPublisher.publish(
+                            EventType.ARTICLE_UNLIKED,
+                            ArticleUnlikedEventPayload.builder()
+                                    .articleLikeId(articleLike.getArticleLikeId())
+                                    .articleId(articleLike.getArticleId())
+                                    .userId(articleLike.getUserId())
+                                    .createdAt(articleLike.getCreatedAt())
+                                    .articleLikeCount(count(articleLike.getArticleId()))
+                                    .build(),
+                            articleLike.getArticleId()
+                    );
                 });
     }
 }
